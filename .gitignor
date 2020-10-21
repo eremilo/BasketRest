@@ -1,7 +1,6 @@
 .allure
-
-#IDEA Files
 .idea
 target
 *.iml
 *.ipr
+#IDEA Files
