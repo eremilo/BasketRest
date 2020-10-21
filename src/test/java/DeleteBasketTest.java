@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 @Epic("Супер новый функционал")
 @Feature("Удаление")
 public class DeleteBasketTest {
-    public String basketName = RandomStringUtils.randomAlphabetic(6);
+    public String basketName = RandomStringUtils.randomAlphabetic(6); //генерим рандомное имя для корзины
     public String token;
 
     BasketModel basket = new BasketModel

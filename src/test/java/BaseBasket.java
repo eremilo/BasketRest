@@ -5,7 +5,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class BaseBasket {
-    public String basketName = RandomStringUtils.randomAlphabetic(6);
+    public String basketName = RandomStringUtils.randomAlphabetic(6); //генерим рандомное имя для корзины
     public String token;
 
     BasketModel basket = new BasketModel

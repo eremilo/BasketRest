@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Epic("Супер новый функционал")
 @Feature("Проверяем создание")
 public class CreateBasketTest {
-    private String basketName = RandomStringUtils.randomAlphabetic(6);
+    private String basketName = RandomStringUtils.randomAlphabetic(6); //генерим рандомное имя для корзины
     private String token;
 
     BasketModel basket = new BasketModel
