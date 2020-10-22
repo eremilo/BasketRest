@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 import static io.restassured.RestAssured.given;
 
 public class HTTPMethods {
-    static final Logger logger = Logger.getLogger(HTTPMethods.class);
+    static final Logger LOGGER = Logger.getLogger(HTTPMethods.class);
     static String BaseUrl = Property.getPropByKey("baseUrl");
     static ValidatableResponse response;
     public static final HTTPMethods INSTANCE = new HTTPMethods();
@@ -35,8 +35,8 @@ public class HTTPMethods {
                 get(urlPath).
                 then();
         String responseBody = response.extract().asString();
-        logger.info("GetResponse URL: " + BaseUrl + urlPath);
-        logger.info("GetResponse BODY: " + responseBody);
+        LOGGER.info("GetResponse URL: " + BaseUrl + urlPath);
+        LOGGER.info("GetResponse BODY: " + responseBody);
         return response;
     }
 
@@ -51,8 +51,8 @@ public class HTTPMethods {
                 post(urlPath).
                 then();
         String responseBody = response.extract().asString();
-        logger.info("PostResponse URL: " + BaseUrl + urlPath);
-        logger.info("PostResponse BODY: " + responseBody);
+        LOGGER.info("PostResponse URL: " + BaseUrl + urlPath);
+        LOGGER.info("PostResponse BODY: " + responseBody);
         return response;
     }
 
@@ -68,8 +68,8 @@ public class HTTPMethods {
                 put(urlPath).
                 then();
         String responseBody = response.extract().asString();
-        logger.info("PutResponse URL: " + BaseUrl + urlPath);
-        logger.info("PutResponse BODY: " + responseBody);
+        LOGGER.info("PutResponse URL: " + BaseUrl + urlPath);
+        LOGGER.info("PutResponse BODY: " + responseBody);
         return response;
     }
 
@@ -82,8 +82,8 @@ public class HTTPMethods {
                 delete(urlPath).
                 then();
         String responseBody = response.extract().asString();
-        logger.info("DeleteResponse URL: " + BaseUrl + urlPath);
-        logger.info("DeleteResponse BODY: " + responseBody);
+        LOGGER.info("DeleteResponse URL: " + BaseUrl + urlPath);
+        LOGGER.info("DeleteResponse BODY: " + responseBody);
         return response;
     }
 }
