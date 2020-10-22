@@ -17,7 +17,6 @@ public class Property {
             props.load(isr);
         } catch (FileNotFoundException e) {
             //log
-            System.out.println("awd");
             e.printStackTrace();
         } catch (IOException e) {
             //log
