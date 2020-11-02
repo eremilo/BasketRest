@@ -12,7 +12,7 @@ public class Property {
 
     public static String getPropByKey(String key) {
         Properties props = new Properties();
-        try (FileInputStream fis = new FileInputStream("src\\main\\resources\\config.properties");
+        try (FileInputStream fis = new FileInputStream("src/main/resources/config.properties");
              InputStreamReader isr = new InputStreamReader(fis, "UTF-8")) {
             props.load(isr);
         } catch (FileNotFoundException e) {
